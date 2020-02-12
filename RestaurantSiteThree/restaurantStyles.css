@@ -1,0 +1,14 @@
+
+@font-face {
+font-family: "Miama";
+  src: url("Miama.otf");
+  }
+
+footer {
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    font-family: Miama;
+}
