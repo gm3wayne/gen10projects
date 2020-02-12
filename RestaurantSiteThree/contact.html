@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+        <title>Contact Us</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+        <script type="text/JavaScript" src="restaurantScript.js"></script>
+        <style>
+            nav .btn {
+            background-color: #5b7d87;
+            color: #fef9ff;
+            width: 90px;
+            height: 40px;
+
+            }
+            
+            nav .btn:hover {
+            font-weight: bold;
+            }
+            
+            .index-form {
+                background-color: lightgray;
+                width: 100%;
+            }
+            
+            form .btn {
+                margin-bottom: 5px;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Food For You</h1>
+        </header>
+        <div class="container">
+            <div class="row mb-1">
+                <div class="col text-center">
+                    <nav>
+                        <a class="btn badge-pill fa fa-home" href="index.html"></a>
+                        <a class="btn badge-pill" href="menu.html">Menu</a>
+                        <a class="btn badge-pill" href="contact.html">Contact Us</a>
+                    </nav>  
+                </div>
+            </div>
+        </div>
+        <article class="index-form">
+            <div class="container">
+                <div class="row mb-1">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <form name="contactForm" onsubmit="return validateContact();">
+                            <div class="form-group">
+                                <label for="customerName">Name:</label>
+                                <input class="form-control" type="text" id="customerName">
+                            </div>
+                            <div class="form-group">
+                                <label for="customerEmail">Email:</label>
+                                <input class="form-control" type="text" id="customerEmail">
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNumber">Phone:</label>
+                                <input class="form-control" type="text" id="phoneNumber">
+                            </div>
+                            <div class="form-group">
+                                <label for="reason">Reason for Inquiry:</label>
+                                <select class="form-control">
+                                    <option>Catering</option>
+                                    <option>Private Party</option>
+                                    <option>Feedback</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="additional">Additional Information:</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="radio-inline" for="visit">Have you been to the restaurant?</label>
+                                <input type="radio" name="visit" checked>Yes
+                                <label class="radio-inline"></label>
+                                <input type="radio" name="visit">No
+                            </div>
+                            <div class="form-group">
+                                <label for="contactDay">Best days to contact you:</label>
+                                <label class="checkbox-inline"><input type="checkbox" value="monday">M</label>
+                                <label class="checkbox-inline"><input type="checkbox" value="tuesday">T</label>
+                                <label class="checkbox-inline"><input type="checkbox" value="wednesday">W</label>
+                                <label class="checkbox-inline"><input type="checkbox" value="thursday">Th</label>
+                                <label class="checkbox-inline"><input type="checkbox" value="friday">F</label>
+                            </div>
+                            
+                            <div class="text-center">
+                            <button type="submit" id="submitButton" class="btn btn-default">Send Request</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            
+            </div>
+        
+        
+        </article>
+        <script src="js/jquery-3.3.1.min.js"></script>
+       <script src="js/popper.min.js"></script>
+       <script src="js/bootstrap.min.js"></script> 
+    <footer>
+        <p>456 No Name St, Milwaukee, WI, 53202</p>
+        <p>414-555-6666</p>
+    </footer> 
+    </body>
+</html>

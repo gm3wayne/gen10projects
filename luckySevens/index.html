@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script type="text/JavaScript" src="rollingDice.js"></script>
+    <style>
+        form .btn {
+            border-color: black;
+            text-align: center;
+        }
+        #startingBet {
+            margin-left: 10px;
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="jumbotron">
+        <h1 class="text-center">Lucky Sevens</h1> 
+    </header>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form name="gambling" onsubmit="return rollDice();" onreset="resetForm();" class="form-inline">
+                <div class="form-group mb-5">
+                <label for="startingBet">Starting Bet: </label>
+                <input type="number" class="form-control" id="startingBet"/>
+                </div>
+                <div class="text-center">
+                <button type="submit" id="submitButton" class="btn btn-default">Play</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4">
+        <table id="results" class="table table-striped table-bordered" style=display:none;>
+        <thead>
+            <tr>
+                <th scope="col" class="text-center">Results</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Starting Bet:</th>
+                <td><span id="beginningBet"></span></td>
+            </tr>
+            <tr>
+                <th scope="row">Total Rolls Before Going Broke:</th>
+                <td><span id="numberRolls"></span></td>
+            </tr>
+            <tr>
+                <th scope="row">Highest Amount Won:</th>
+                <td><span id="peakBet"></span></td>
+            </tr>
+            <tr>
+            <th scope="row">Roll Count at Highest Amount Won:</th>
+            <td><span id="peakAmountIndex"></span></td>
+            </tr>
+        </tbody>
+    </table>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+</body>
+</html>
